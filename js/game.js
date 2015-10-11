@@ -10,12 +10,16 @@ Game.prototype = {
   },
   coinDropped: function(e){
     var column = this.stage.getColumnFromX(e.target.x());
-    var row = 5 - this.grid.update(column, this.player)
-    this.stage.animateFall(e, row);
-    if( this.winner(6 - row, column) )
-      alert("player "+(this.player+1)+" won!");
-    else
-      this.changeTurns();
+    if (column) {;
+      var row = 5 - this.grid.update(column, this.player)
+      this.stage.animateFall(e, row);
+      if( this.winner(6 - row, column) )
+        alert("player "+(this.player+1)+" won!");
+      else
+        this.changeTurns();
+    } else{
+      this.stage.animateFall(e, 0);
+    }
   },
   changeTurns: function(){
     this.player ^= 1
