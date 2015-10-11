@@ -1,0 +1,8 @@
+{
+  "name": "socketFour",
+  "version": "0.0.1",
+  "description": "never-before-seen game with sockets",
+  "dependencies": {
+    "express": "^4.10.2"
+  }
+}

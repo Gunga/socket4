@@ -55,7 +55,7 @@ Stage.prototype = {
       this.frontLayer.add(image);
       this.refresh();
     }.bind(this);
-    boardImg.src = 'board.png'
+    boardImg.src = 'img/board.png'
   },
   yellowCoin: function(){
     var coin = new Kinetic.Circle({
