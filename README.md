@@ -27,3 +27,8 @@ point people back here too so others know where it started.
 
 [Joan Torres]  
 October 10, 2015
+
+### P.S. Live demo (Game only)
+There's demo of this alpha MVP, never-before-seen game if you follow this link:  
+
+* [http://gunga.github.io/blog-posts/projects/socket4/](http://gunga.github.io/blog-posts/projects/socket4/)
