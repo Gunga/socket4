@@ -14,6 +14,7 @@ var Stage = function() {
   this.generateBoard()
 
   this.stage.add(this.backLayer, this.coinLayer, this.frontLayer)
+  this.columnXs = [0, 157, 239, 321, 403, 485, 567, 649];
 }
 
 
@@ -96,21 +97,21 @@ Stage.prototype = {
 
     return coin;
   },
-  animateFall: function(e, row){
+  animateFall: function(coin, row){
     var velocity = 50;
     var game = this;
     var drop = 445 - 70*row
-    var startPoint = e.target.y();
+    var startPoint = coin.y();
     var anim = new Kinetic.Animation(function(frame) {
-      if ( e.target.y() >= drop){
+      if ( coin.y() >= drop){
         this.stop();
       } else {
         var t = (frame.time / 1000);
         var disp = startPoint + velocity * t + 9040*t*t;
         if(disp >= drop)
-          e.target.y(drop);
+          coin.y(drop);
         else
-          e.target.y(disp);
+          coin.y(disp);
       }
     }, this.coinLayer);
 
@@ -132,6 +133,9 @@ Stage.prototype = {
     } else if(579 <= xCoord && xCoord < 687){
       return 7;
     }
+  },
+  getXFromColumn: function(column){
+    return this.columnXs[column];
   }
 
 }

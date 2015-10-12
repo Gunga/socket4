@@ -13,6 +13,7 @@ var users = 0;
 io.on('connection', function(socket){
   console.log(++users + " challengers online!");
 
+  socket.emit('player', users);
 
   socket.on('disconnect', function(){
     users--;
