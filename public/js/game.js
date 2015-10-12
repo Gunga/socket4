@@ -19,6 +19,7 @@ Game.prototype = {
       if( this.winner(6 - row, column) )
         alert("player "+(this.player+1)+" won!");
 
+      this.socket.emit('move made', new Event({player: this.player, row: row, column: column}));
     } else{
       this.stage.animateFall(e.target, 0);
     }
