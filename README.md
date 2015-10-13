@@ -29,6 +29,17 @@ point people back here too so others know where it started.
 October 10, 2015
 
 ### P.S. Live demo (Game only)
-There's demo of this alpha MVP, never-before-seen game if you follow this link:  
+There's a demo of this alpha MVP, never-before-seen game if you follow this link:  
 
 * [http://gunga.github.io/blog-posts/projects/socket4/](http://gunga.github.io/blog-posts/projects/socket4/)
+
+## Milestone Reached
+
+So now the game is playable using sockets! However, I still want to implement
+a log that will add some security aspects to it. The main reason being that a
+not-so-honest player can read the code and send events to his opponent where
+he modifies his turn slightly. Now the log could in theory be modified, but
+I'll just make sure to use some nifty tricks to make that quite hard.  
+
+[Joan Torres]  
+October 12, 2015
